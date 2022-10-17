@@ -1,0 +1,26 @@
+{
+  "name": "protobuf-to-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-proto-common": "node ./src/compile_proto.js",
+    "merge-proto": "browserify ./src/out/modules/xxx.js ..... > ./src/out/browser/outPut.js",
+    "compress-proto": "terser -c toplevel,sequences=false --mangle -- ./src/out/browser/outPut.js > ./src/out/terser/util.js",
+    "build-proto": "node ./src/entry.js"
+  },
+  "keywords": [
+    "protobuf",
+    "javascript",
+    "protoc",
+    "google-protobuf"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "17.0.0",
+    "google-protobuf": "^3.21.1",
+    "terser": "^5.15.1"
+  }
+}

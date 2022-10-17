@@ -1,0 +1,18 @@
+syntax="proto2";
+
+// 通用命令
+message SimpleCmd {
+	optional string cmd = 1;
+	optional string arg = 2;
+	optional bytes  data = 3;
+	optional string arg1 = 4;
+	optional string arg2 = 5;
+}
+
+enum ID
+{
+    UNKNOWN = 0;
+    Msg_SimpleCmd = 300;
+	Msg_BroadcastCmd = 301;//广播的同一个场景内所有玩家的通用命令
+	Msg_ToPlayerCmd = 302;//发给指定玩家的通用命令
+}
